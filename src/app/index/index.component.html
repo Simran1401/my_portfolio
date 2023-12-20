@@ -1,0 +1,429 @@
+<nav class="navbar navbar-expand-lg navbar-light sticky-top animate__animated"
+    [ngClass]="{'animate__slideInDown': isScrolled,'scrolled': isScrolled}">
+    <div class="container-fluid">
+        <a class="navbar-brand">
+            <img src="../../assets/imgs/simran_logo.png" alt="" class="logo_img">
+        </a>
+
+        <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+
+        <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse justify-content-end">
+            <ul class="nav nav-pills">
+                <li class="nav-item active">
+                    <!-- Step 4: Close the menu when a link is clicked. -->
+                    <a class="nav-link" (click)="isMenuCollapsed = true" href="#list-item-1">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="isMenuCollapsed = true" href="#list-item-2">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="isMenuCollapsed = true" href="#list-item-3">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="isMenuCollapsed = true" href="#list-item-4">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="isMenuCollapsed = true" href="#list-item-5">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+    <div id="list-item-1">
+        <img src="../../assets/imgs/H.svg" alt="" class="bg-img">
+        <div class="section-1 all-sections">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="left-part animate__zoomIn animate__animated">
+                        <div class="left-top-part">
+                            <img src="../../assets/imgs/Ellipse 1.png" alt="" class="profile-img mb-3">
+                            <p class="f-28-5">SIMRAN SAINI</p>
+                            <p class="f-30 mb-0">FRONT-END DEVELOPER</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center left-bottom-part">
+                            <p class="b-30 mb-0">Follow On</p>
+                            <div>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-instagram me-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg> -->
+                                <a href="https://www.linkedin.com/in/simran-saini-9811591b1/?trk=nav_responsive_tab_profile_pic&originalSubdomain=in"
+                                    style="text-decoration: none;color: #000;" target="_blank">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="right-part animate__animated animate__zoomIn">
+                        <p class="f-60">HELLO <br> EVERYONE</p>
+                        <p class="f-30">Here’s Who I am & What I do.</p>
+                        <a href="../../assets/Simran___saini-2.pdf" download="simran_saini_resume"
+                            class="purple-btn">Download Resume</a>
+                        <p class="f-17">
+                            👋 Hey there! I'm Simran
+                            Saini, a passionate front-end developer with over 3+ years of experience in crafting
+                            captivating web experiences.
+                            <br>
+                            🛠️ My toolkit includes HTML, CSS, and JavaScript, and I'm a pro at turning designs into
+                            pixel-perfect, responsive web wonders.
+                            <br>
+                            🌐 My journey is all about turning ideas into interactive realities. Whether it's optimizing
+                            UI/UX or ensuring seamless responsiveness, I thrive on bringing innovation to every project.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="list-item-2">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-6 wow fadeInRight">
+                    <h2 class="fw-normal">Education</h2>
+                    <ul class="timeline mt-4 pr-md-5">
+                        <li>
+                            <div class="title">2018-2022</div>
+                            <div class="details mb-5">
+                                <h5>Bachelor of Technology- Computer Science</h5>
+                                <small class="fg-theme">Jagannath Gupta Institue of Engineering and Technology,
+                                    Jaipur</small>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">2017-2018</div>
+                            <div class="details mb-5">
+                                <h5>12th</h5>
+                                <small class="fg-theme">SV Public School, Jaipur</small>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">2015-2016</div>
+                            <div class="details">
+                                <h5>10th</h5>
+                                <small class="fg-theme">SV Public School, Jaipur</small>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
+                    <h2 class="fw-normal">Experience</h2>
+                    <ul class="timeline mt-4 pr-md-5">
+                        <li>
+                            <div class="title">October 2022 - Oct 2023</div>
+                            <div class="details mb-5">
+                                <h5>Job </h5>
+                                <small class="fg-theme">Front-end Developer</small>
+                                <p class="mb-0">Great Future Technology Private Limited</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">Nov 2021 - Oct 2022</div>
+                            <div class="details mb-5">
+                                <h5>Internship </h5>
+                                <small class="fg-theme">Front-end Developer</small>
+                                <p class="mb-0">Great Future Technology Private Limited</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">May 2021 - Oct 2021</div>
+                            <div class="details">
+                                <h5>Training </h5>
+                                <small class="fg-theme">Web Development</small>
+                                <p class="mb-0">DIIT Educom, Jaipur</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="list-item-3" class="section-3">
+        <div class="badge-purple">Portfolio</div>
+        <h2 class="mb-5">See My Work</h2>
+        <div class="container">
+            <div class="row w-100 m-0 justify-content-center">
+                <div class="col-sm-4 mb-4">
+                    <div class="website-box">
+                        <img src="../../assets/imgs/Untitled_design-removebg-preview.png" alt="" class="website-img">
+                        <div class="hover-box">
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <p class="mb-0 web-name">Bharat-Mat</p>
+                                <div class="d-flex">
+                                    <a href="https://bharatmatcompany.com/" class="github me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                            <path
+                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://github.com/Simran1401/Bharat-Mat" class="github">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <div class="website-box">
+                        <img src="../../assets/imgs/Untitled_design__1_-removebg-preview.png" alt=""
+                            class="website-img">
+                        <div class="hover-box">
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <p class="mb-0 web-name">Business Card</p>
+                                <div class="d-flex">
+                                    <a href="https://businesscard4u.in/gftpl" class="github me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                            <path
+                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://github.com/Simran1401/Bharat-Mat" class="github">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <div class="website-box">
+                        <img src="../../assets/imgs/Untitled_design__2_-removebg-preview (1).png" alt=""
+                            class="website-img">
+                        <div class="hover-box">
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <p class="mb-0 web-name">Handicrafts</p>
+                                <div class="d-flex">
+                                    <a href="https://hcf.gftpl.in/" class="github me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                            <path
+                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://github.com/Simran1401/Bharat-Mat" class="github">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <div class="website-box">
+                        <img src="../../assets/imgs/Untitled_design__2_-removebg-preview.png" alt=""
+                            class="website-img">
+                        <div class="hover-box">
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <p class="mb-0 web-name">Jv-scan</p>
+                                <div class="d-flex">
+                                    <a href="https://jvweb.gftpl.in/home" class="github me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                            <path
+                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://github.com/Simran1401/jv-scan" class="github">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <div class="website-box">
+                        <img src="../../assets/imgs/Untitled_design__3_-removebg-preview.png" alt=""
+                            class="website-img">
+                        <div class="hover-box">
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <p class="mb-0 web-name">Instant Light</p>
+                                <div class="d-flex">
+                                    <a href="https://ilweb.gftpl.in/home" class="github me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                            <path
+                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://github.com/Simran1401/Bharat-Mat" class="github">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <div class="website-box">
+                        <img src="../../assets/imgs/Untitled_design__4_-removebg-preview.png" alt=""
+                            class="website-img">
+                        <div class="hover-box">
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <p class="mb-0 web-name">MyHelp4You</p>
+                                <div class="d-flex">
+                                    <a href="https://myhelp4u.in/" class="github me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                            <path
+                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://github.com/Simran1401/Bharat-Mat" class="github">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 mb-4">
+                    <div class="website-box">
+                        <img src="../../assets/imgs/Untitled_design__5_-removebg-preview.png" alt=""
+                            class="website-img">
+                        <div class="hover-box">
+                            <div class="d-flex justify-content-between align-items-baseline">
+                                <p class="mb-0 web-name">MSG</p>
+                                <div class="d-flex">
+                                    <a href="https://msg.gftpl.in/" class="github me-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                                            <path
+                                                d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://github.com/Simran1401/Bharat-Mat" class="github">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="list-item-4" class="section-4">
+        <div class="badge-purple mb-0">Skills</div>
+        <h2 class="mb-4">I HAVE</h2>
+        <div class="container skillSet">
+            <div class="skill-box">
+                <p class="blue-text mb-0">
+                    HTML
+                </p>
+            </div>
+            <div class="skill-box">
+                <p class="blue-text mb-0">
+                    CSS
+                </p>
+            </div>
+            <div class="skill-box">
+                <p class="blue-text mb-0">
+                    JQUERY
+                </p>
+            </div>
+            <div class="skill-box">
+                <p class="blue-text mb-0">
+                    BOOTSTRAP
+                </p>
+            </div>
+            <div class="skill-box">
+                <p class="blue-text mb-0">
+                    JAVASCRIPT
+                </p>
+            </div>
+            <div class="skill-box">
+                <p class="blue-text mb-0">
+                    ANGULAR
+                </p>
+            </div>
+            <div class="skill-box">
+                <p class="blue-text mb-0">
+                    GIT
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="list-item-5 mt-3" class="section-5">
+        <h2 class="mb-4">Contact Me</h2>
+        <form class="contact-form">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="John Doe">
+                <label for="floatingInput">Your Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Your Email </label>
+            </div>
+            <div class="form-floating">
+                <textarea type="text" class="form-control" id="floatingPassword" placeholder="Your message"
+                    style="height: 170px;"></textarea>
+                <label for="floatingPassword">Your Message</label>
+            </div>
+        </form>
+    </div>
+    <footer class="footer text-center">
+        <p class="p-16 mb-0">@2023 SIMRAN SAINI <br>
+
+            ALL RIGHTS RESERVED</p>
+    </footer>
+</div>
