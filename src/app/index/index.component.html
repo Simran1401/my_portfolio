@@ -40,7 +40,7 @@
                 <div class="col-sm-5">
                     <div class="left-part animate__zoomIn animate__animated">
                         <div class="left-top-part">
-                            <img src="../../assets/imgs/Ellipse 1.png" alt="" class="profile-img mb-3">
+                            <img src="../../assets/imgs/profile.png" alt="" class="profile-img mb-3">
                             <p class="f-28-5">SIMRAN SAINI</p>
                             <p class="f-30 mb-0">FRONT-END DEVELOPER</p>
                         </div>
@@ -423,25 +423,25 @@
             <button class="purple-btn mt-4">Send Message</button>
         </form> -->
 
-        <form (ngSubmit)="sendMail()" class="contact-form">
+        <form (submit)="sendEmail($event)" class="contact-form">
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="John Doe" [(ngModel)]="name"
-                    required>
+                <input type="email" class="form-control" id="floatingInput" placeholder="John Doe" name="user_name"
+                    required [(ngModel)]="name">
                 <label for="floatingInput">Your Name</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-                    [(ngModel)]="toEmail" required>
+                name="user_email" required [(ngModel)]="toEmail">
                 <label for="floatingInput">Your Email </label>
             </div>
             <div class="form-floating">
                 <textarea type="text" class="form-control" id="floatingPassword" placeholder="Your message"
-                    style="height: 170px;" [(ngModel)]="message" required></textarea>
+                    style="height: 170px;" name="message" [(ngModel)]="message"></textarea>
                 <label for="floatingPassword">Your Message</label>
             </div>
             <button class="purple-btn mt-4" type="submit">Send Message</button>
         </form>
-        <form class="contact-form" (submit)="sendEmail($event)">
+        <!-- <form class="contact-form" (submit)="sendEmail($event)">
             <label>Name</label>
             <input type="text" name="user_name">
             <label>Email</label>
@@ -449,7 +449,7 @@
             <label>Message</label>
             <textarea name="message"></textarea>
             <input type="submit" value="Send">
-        </form>
+        </form> -->
     </div>
     <footer class="footer text-center">
         <p class="p-16 mb-0">@2023 SIMRAN SAINI <br>

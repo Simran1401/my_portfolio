@@ -34,15 +34,20 @@ export class IndexComponent {
     emailjs.sendForm(environment.emailService.serviceId, environment.emailService.templateId, e.target as HTMLFormElement, environment.emailService.publicKey)
       .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
+        this.clearForm()
       }, (error) => {
         console.log(error.text);
       });
   }
 
-  sendMail(): void {
-    // Call a service to send the email (not implemented in this example)
-    console.log('Email Sent:', { to: this.toEmail, subject: this.name, message: this.message });
+  private clearForm() {
+    this.toEmail = '';
+    this.name = '';
+    this.message = '';
   }
+  // sendMail(): void {
+  //   console.log('Email Sent:', { to: this.toEmail, subject: this.name, message: this.message });
+  // }
 
 
 }
