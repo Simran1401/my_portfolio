@@ -318,7 +318,8 @@
                                                 d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
                                         </svg>
                                     </a>
-                                    <a href="https://github.com/Simran1401/Repair-and-installation-services-website" class="github">
+                                    <a href="https://github.com/Simran1401/Repair-and-installation-services-website"
+                                        class="github">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                                             <path
@@ -403,9 +404,9 @@
             </div>
         </div>
     </div>
-    <div id="list-item-5 mt-3" class="section-5">
+    <div id="list-item-5 " class="section-5 mt-3">
         <h2 class="mb-4">Contact Me</h2>
-        <form class="contact-form">
+        <!-- <form class="contact-form">
             <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="floatingInput" placeholder="John Doe">
                 <label for="floatingInput">Your Name</label>
@@ -420,6 +421,34 @@
                 <label for="floatingPassword">Your Message</label>
             </div>
             <button class="purple-btn mt-4">Send Message</button>
+        </form> -->
+
+        <form (ngSubmit)="sendMail()" class="contact-form">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="John Doe" [(ngModel)]="name"
+                    required>
+                <label for="floatingInput">Your Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                    [(ngModel)]="toEmail" required>
+                <label for="floatingInput">Your Email </label>
+            </div>
+            <div class="form-floating">
+                <textarea type="text" class="form-control" id="floatingPassword" placeholder="Your message"
+                    style="height: 170px;" [(ngModel)]="message" required></textarea>
+                <label for="floatingPassword">Your Message</label>
+            </div>
+            <button class="purple-btn mt-4" type="submit">Send Message</button>
+        </form>
+        <form class="contact-form" (submit)="sendEmail($event)">
+            <label>Name</label>
+            <input type="text" name="user_name">
+            <label>Email</label>
+            <input type="email" name="user_email">
+            <label>Message</label>
+            <textarea name="message"></textarea>
+            <input type="submit" value="Send">
         </form>
     </div>
     <footer class="footer text-center">

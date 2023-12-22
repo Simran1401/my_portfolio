@@ -1,4 +1,7 @@
 import { Component, HostListener } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-index',
@@ -6,7 +9,9 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent {
-
+  toEmail: string = '';
+  name: string = '';
+  message: string = '';
   isMenuCollapsed = true;
 
   isScrolled = false;
@@ -24,5 +29,20 @@ export class IndexComponent {
     }
   }
 
-  
+  public sendEmail(e: Event) {
+    e.preventDefault();
+    emailjs.sendForm(environment.emailService.serviceId, environment.emailService.templateId, e.target as HTMLFormElement, environment.emailService.publicKey)
+      .then((result: EmailJSResponseStatus) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
+
+  sendMail(): void {
+    // Call a service to send the email (not implemented in this example)
+    console.log('Email Sent:', { to: this.toEmail, subject: this.name, message: this.message });
+  }
+
+
 }
