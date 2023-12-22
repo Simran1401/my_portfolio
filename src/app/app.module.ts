@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { NgbAccordionModule, NgbCollapseModule, NgbDropdownModule, NgbScrollSpyModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NgbAccordionModule, NgbCollapseModule, NgbDropdownModule, NgbScrollSpyM
     NgbCollapseModule,
     NgbAccordionModule,
     NgbScrollSpyModule,
-    NgbDropdownModule
+    NgbDropdownModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
