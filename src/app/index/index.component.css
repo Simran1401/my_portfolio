@@ -452,6 +452,9 @@
 }
 
 @media (max-width:768px) {
+    .hey{
+        width: 8%;
+    }
     .navbar {
         padding: 6px 10px;
     }
